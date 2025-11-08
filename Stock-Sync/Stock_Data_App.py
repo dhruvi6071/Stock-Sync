@@ -28,6 +28,8 @@ def run_pipeline(folder_path=None):
     if folder_path is None:
         folder_path = os.path.join(base_dir, "playground")
 
+    os.makedirs(folder_path, exist_ok=True)
+
     # (1) locate your CSV files — same logic you had before
     files = [f for f in os.listdir(folder_path) if f.lower().endswith(".csv")]
 
