@@ -8,7 +8,7 @@ from difflib import get_close_matches
 
 # 🗂️ Automatically detect playground folder in the current directory
 base_dir = os.path.dirname(os.path.abspath(__file__))
-folder_path = os.path.join(base_dir, "playground")
+folder_path = os.path.join(base_dir, "play-ground")
 
 if not os.path.exists(folder_path):
     print(f"❌ Folder not found: {folder_path}")

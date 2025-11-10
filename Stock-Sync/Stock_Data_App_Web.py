@@ -30,12 +30,12 @@ if st.button("▶ Run Full Data Merge"):
             cols = list(df.columns)
             if "COMPANY" in cols:
                 df = df[["COMPANY"] + [c for c in cols if c != "COMPANY"]]
-
             status.success(f"✅ Pipeline completed — {len(df)} rows.")
 
             # Show 4 random rows
             sample_df = df.sample(4) if len(df) >= 4 else df
-            df_area.dataframe(sample_df, width="stretch")
+            print("mid step")
+            df_area.dataframe(sample_df)
 
             # Download Button
             buffer = io.BytesIO()
@@ -65,7 +65,7 @@ else:
 
             # Show 4 random rows
             sample_df = df0.sample(4) if len(df0) >= 4 else df0
-            df_area.dataframe(sample_df, width="stretch")
+            df_area.dataframe(sample_df)
 
             status.info(f"Loaded existing file: {os.path.basename(play)} ({len(df0)} rows)")
         except Exception as e:
