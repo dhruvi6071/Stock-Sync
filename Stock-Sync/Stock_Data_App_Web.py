@@ -11,7 +11,7 @@ st.caption("Run your full data processing pipeline directly from your browser!")
 
 # Define path to existing processed file ONCE here ✅
 base_dir = os.path.dirname(os.path.abspath(__file__))
-play = os.path.join(base_dir, "playground", "Cleaned_Final_Data.xlsx")
+play = os.path.join(base_dir, "Stock-Sync/playground", "Cleaned_Final_Data.xlsx")
 
 # placeholders
 status = st.empty()
